@@ -44,7 +44,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class_Hook.cs" />
-    <Compile Include="Class_HotkeyHookManager.cs" />
+    <Compile Include="Class_HookManager.cs" />
+    <Compile Include="Class_SupportedKeys.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

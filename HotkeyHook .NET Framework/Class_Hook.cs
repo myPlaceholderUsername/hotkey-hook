@@ -10,7 +10,7 @@ namespace HotkeyHook
 {
     public class Class_Hook
     {
-        public delegate void HookedFunction(List<object> inArgs);
+        public delegate void HookedFunction(Dictionary<string, object> inArgs);
 
         public static List<Class_Hook> MyHooks { get; private set; } = new List<Class_Hook>();
         internal static Dictionary<Enum_SupportedKeys, HookedFunction> Dict_HotkeyAndFunction { get; set; } = new Dictionary<Enum_SupportedKeys, HookedFunction>();

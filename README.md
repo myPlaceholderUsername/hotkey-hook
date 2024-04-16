@@ -21,9 +21,9 @@ Note that all public functions are static
 
 ## 1. Classes
 This DLL consists of 3 classes:
--Class_HookManager for high level purpose such as setting hotkey and unsetting hotkey,
--Class_Hook to access individual hook,
--Class_SupportedKeys that handles keys that are supported by this DLL.
+- Class_HookManager for high level purpose such as setting hotkey and unsetting hotkey,
+- Class_Hook to access individual hook,
+- Class_SupportedKeys that handles keys that are supported by this DLL.
 
 ## 2. Class_Hook.HookedFunction
 This is a delegate for the function that will be run when hotkey is pressed.

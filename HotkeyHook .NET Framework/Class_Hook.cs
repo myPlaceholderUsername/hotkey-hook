@@ -21,7 +21,7 @@ namespace HotkeyHook
 
         private Class_HookManager.HookProc HookProc { get; set; }     // Prevents disposal of callback that is still used
         internal HookedFunction FunctionToCallOnKeyPress { get; set; }
-        public List<object> Args { get; set; } = new List<object>();    // Arguments of hooked function
+        public Dictionary<string, object> Args { get; set; } = new Dictionary<string, object>();    // Arguments of hooked function
 
         /// <summary>
         /// This variable is used to prevent the hook from being triggered multiple times when hotkey is being held down

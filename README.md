@@ -21,21 +21,21 @@ Note that all public functions are static
 
 ## 1. Classes
 This DLL consists of 3 classes:
-- Class_HookManager for high level purpose such as setting hotkey and unsetting hotkey,
-- Class_Hook to access individual hook,
-- Class_SupportedKeys that handles keys that are supported by this DLL.
+- Class_HookManager for high level purpose such as setting hotkey and unsetting hotkey
+- Class_Hook to access individual hook
+- Class_SupportedKeys that handles keys that are supported by this DLL
 
 ## 2. Class_Hook.HookedFunction
 This is a delegate for the function that will be run when hotkey is pressed.
-This delegate takes List<object> as parameter, and returns void.
+This delegate takes Dictionary<string, object> as parameter, and returns void.
 Function that is to be hooked must be in the same format as this delegate.
 
 Example:
 ```C#
 void exampleBadFunction() {}
-void exampleGoodFunction(List<object> inObjects) {}
+void exampleGoodFunction(Dictionary<string, object> inObjects) {}
 ```
-Hotkey cannot be set to run exampleBadFunction() because it is doesn't have the same paramter as the delegate.
+Hotkey cannot be set to run exampleBadFunction() because it is doesn't have the same parameter as the delegate.
 On the other hand, exampleGoodFunction() has the correct format.
 
 ## 3. Setting Hook/Hotkey
@@ -74,7 +74,7 @@ void main()
     }
 }
 ```
-Args is of data type Dictionary<string, object> so we can create a pseudo parameter system. This way, we can pass as many values of any kinds to the hooked function.
+Args is of data type Dictionary<string, object> so we can create a pseudo parameter system. This way, we can pass as many values of any type to the hooked function.
 
 If for some reason, we need to access all hooks, we can call this list:
 ```C#

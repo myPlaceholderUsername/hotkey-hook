@@ -46,7 +46,7 @@ static bool SetHotkeyLocal(Enum_SupportedKeys hotkey, Class_Hook.HookedFunction 
 ```
 - hotkey is the Enum for hotkey. See the aforementioned <u>Supported Hotkeys</u> section.
 - hookedFunction is the function that will run when hotkey is pressed.
-- Return **false** if fail to set hotkey. Return **true** if success.
+- Return **false** if fail to set hotkey. Return **true** if successful.
 
 ### a. Converting Hotkey String to Enum
 A function has been provided to convert hotkey string to the hotkey enum -- for example, converting string "F3" to Enum_SupportedKeys.F3
